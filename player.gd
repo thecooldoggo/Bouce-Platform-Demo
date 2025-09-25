@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 500.0
+const SPEED = 400.0
 
 var jump_velocity = -700.0
 var was_in_air = false
@@ -13,9 +13,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 
-	var just_landed = is_on_floor() and was_in_air
+	var just_landed = (is_on_floor() or is_on_ceiling()) and was_in_air
 	if just_landed:
 		randomize_sprite_color()
+		velocity.y = jump_velocity 
 		was_in_air = false
 	
 	if not is_on_floor() and not is_on_ceiling():
