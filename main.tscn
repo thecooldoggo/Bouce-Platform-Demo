@@ -1881,8 +1881,8 @@ repeat_size = Vector2(1, 1)
 repeat_times = 15
 
 [node name="Space" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(577, 325.00003)
-scale = Vector2(1.8856212, 1.7015709)
+position = Vector2(831, 514)
+scale = Vector2(2.7156863, 2.6910996)
 texture = ExtResource("5_lquwl")
 
 [node name="Killzone" type="Area2D" parent="."]

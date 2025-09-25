@@ -15,6 +15,12 @@ run/main_scene="uid://dfmi814reb7cg"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [input]
 
 jump={
@@ -49,3 +55,4 @@ flip_gravity={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
